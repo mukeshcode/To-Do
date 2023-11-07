@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Dancing+Script:wght@700&family=Montserrat&display=swap');
+
+:root {
+  --serif: 'Bitter', serif;
+  --sans-serif: 'Montserrat', sans-serif;
+  --color-body-high: yellow;
+  --color-body-low: #F0DE36;
+  --color-brown-high: #D71313;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--sans-serif);
+
+}
+
+::-webkit-scrollbar{
+  width: 1rem;
+  background-color: red;
+
+}
+
+::-webkit-scrollbar-thumb{
+  width: 1rem;
+  background-color: yellow;
+}
+
+body {
+  background-color: var(--color-body-low);
+}
+
+nav {
+  /* animation: 1s; */
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D71313;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  /* background-color: red; */
+  flex: 0 1 60%;
+  justify-content: center;
+  align-items: center;
+  /* outline: 5px solid white;
+      padding: 0.25rem 0.5rem; */
+  height: inherit;
+  color: beige;
+  background-color: red;
+  /* background-image: linear-gradient(to right, red, white, red); */
+}
+
+.logo h1 {
+  letter-spacing: 0.2rem;
+  font-family: var(--serif);
+}
+
+
+
+.logo>.logoImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+
+nav>ul {
+  display: flex;
+  list-style-type: none;
+  /* background-color: blue; */
+  justify-content: space-around;
+  flex: 1 1 40%;
+  font-family: var(--sans-serif);
+  font-size: 0.8rem;
+}
+
+nav>ul li img.dayTypeImg {
+  width: 20px;
+  /* height: 20px; */
+}
+
+nav>ul li>a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  /* padding: 1rem; */
+  /* border: 1px solid gray; */
+  padding: 0.25rem 0.5rem;
+  background-color: #0000002c;
+  color: white;
+  transition: 0.3s;
+  border-radius: 0.25rem;
+}
+
+nav>ul li>a:hover {
+  background-color: rgba(255, 255, 255, 0.116);
+  /* box-shadow: 0px 0px 7px 5px red;
+      outline: 1px solid white; */
+}
+
+nav>ul li>a>span {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+main{
+  position: relative;
+  height: 80vh;
+  overflow-y: scroll;
+  margin: 1rem 0;
+}
+
+footer {
+  /* display: block; */
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #D71313;
+  color: white;
+  padding: 0.5rem;
+}
+
+/* Main content header styling */
+main>header {
+  margin: 0rem auto 1rem;
+  text-align: center;
+  width: 40%;
+  background-color: var(--color-brown-high);
+  padding: 0.5rem;
+  font-size: 2rem;
+  color: var(--color-body-low);
+  border-left: 1rem solid var(--color-body-high);
+  border-right: 1rem solid var(--color-body-high);
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+
+
+.task {
+  display: flex;
+  margin: 0px auto 1rem;
+  width: 40%;
+  background-color: var(--color-body-high);
+  /* border: 1px dashed var(--color-brown-high); */
+  box-shadow: 0px 0px 5px 1px white;
+  padding: 0.25rem;
+}
+
+.task input {
+  text-align: center;
+  border: none;
+  background-color: var(--color-body-high);
+  font-size: 1rem;
+}
+
+.task input[type=text] {
+  padding: 1rem;
+  flex: 0 1 90%;
+  color: var(--color-brown-high);
+}
+
+.task input[type=submit] {
+  min-height: 50px;
+  min-width: 50px;
+  padding: 0.5rem;
+  flex: 0 1 10%;
+  border-radius: 50%;
+  background-color: yellow;
+  color: var(--color-brown-high);
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.task input[type=submit]:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+  background-color: var(--color-brown-high);
+  color: var(--color-body-high);
+  /* opacity: 0.5; */
+}
+
+.task input[type=text]:focus {
+  outline: none;
+}
+
+div.createdTasks {
+  width: 40%;
+  /* padding: 3rem; */
+  margin: 0px auto;
+}
+
+.createdTasks .eachTask {
+  color: var(--color-brown-high);
+  display: flex;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.createdTasks .eachTask:nth-child(odd) {
+  background-color: var(--color-body-high);
+}
+
+.eachTask p {
+  flex: 0 1 90%;
+  text-align: center;
+}
+
+.eachTask input {
+  flex: 0 1 auto;
+
+}
+
+.strikeThrough {
+  text-decoration: line-through;
+}

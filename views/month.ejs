@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+  <!-- Showing current day and date -->
+  <header>
+    <%= date %>
+  </header>
+  <!-- Our to do list -->
+  <section>
+    <div class="createdTasks">
+      <%if(locals.tasks){%>
+        <%tasks.forEach((task)=> {%>
+          <div class="eachTask">
+            <input type="checkbox" name="taskCompleted">
+            <p>
+              <%=task%>
+            </p>
+          </div>
+          <%})%>
+      <%}%>
+    </div>
+    <form action="/month" class="task" method="POST">
+      <input type="text" name="task" placeholder="Create Task">
+      <input type="submit" value="+">
+    </form>
+
+  </section>
+</main>
+
+<%- include("partials/footer.ejs") %>
